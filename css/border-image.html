@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-image</title>
+    <style>
+        div{
+            width:300px; height:100px;
+            margin: 10px;
+            background-color: rgb(195, 183, 183);
+            border: 10px solid;
+        }
+        div.box1{
+            border-image: url(./images/border.png) 30 30 round;
+        }
+        div.box2{
+            border-image: url(./images/border.png) 30 30 stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

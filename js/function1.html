@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function1</title>
+    <script>
+        var add = function(){
+            let sum =0;
+            console.log(arguments.length);
+            for(let idx in arguments){
+                //console.log(arguments[idx]);
+                sum = sum + arguments[idx];
+            }
+            return sum;
+        }
+        console.log(add(10,20,30,40));
+        console.log(add(10,20,30));
+        document.write(add(10,20,30,40)+"<br>")
+        document.write(add(10,20,30))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

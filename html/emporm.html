@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empform</title>
+    <style>
+        label{
+        display:inline-block;
+        width: 65px;
+    }
+    </style>
+    
+</head>
+<body>
+    <h2>Emp 정보</h2>
+    <form action="#" method = "post">
+            <label>사원번호:</label><input type ="text" name="id"/><br>
+            <label>이름:</label><input type = "text" name="name"/><br>
+            <label>성별:</label><input type = "radio" name="gender" value ="male"/>남자<input type = "radio" name="gender" value ="female"/>여자<br>
+            <label>직업:</label><input type = "text" name="job"/><br>
+            <label>상사:</label>
+            <select name="mgr">
+                <option value="7369" selected>7369</option>
+                <option value="7499">7499</option>
+                <option value="7521">7521</option>
+                <option value="7566">7566</option>
+                <option value="7654">7654</option>
+                <option value="7698">7698</option>
+                <option value="7782">7782</option>
+                <option value="7788">7788</option>
+                <option value="7844">7844</option>
+                <option value="7876">7876</option>
+            </select><br>
+            <label>입사일:</label><input type = "text" name="hiredated" placeholder="2012-01-01"/><br>
+            <label>급여:</label><input type = "text" name="salary"/><br>
+            <label>커미션:</label><input type = "text" name="com"/><br>
+            <label>부서번호</label>
+            <select name="deptno">
+                <option value="10" selected>10 ACCOUNTING EWYORK</option>
+                <option value="20">20 RESEARCH DALAS</option>
+                <option value="30">30 SALES CHICAGO</option>
+                <option value="40">40 OPERATINGS BOSTON</option>
+            </select><br>
+            <input type="submit" value="저장">
+            <input type="reset" value="취소">
+            
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+</head>
+<body>
+    이름:<input type="text" name="username">
+    <input type="button" value="입 력"><br>
+    <p>당신의 이름은 <span class="output">________</span>입니다.</p>
+    <script>
+        var input = document.querySelector("input[name=username]");
+        var btn = document.querySelector("input[type=button]");
+        var output = document.querySelector(".output");
+
+        btn.onclick = function(event){
+            let name = input.value; // input.value 의 값을 지역변수 name에 저장
+            input.value=""; // input.value를 초기화
+            //output.textContent = name;
+            output.innerHTML = "<B>"+name+"</B>"; // output에 name의 값을 넣어줌
+        }
+    </script>
+</body>
+</html>
