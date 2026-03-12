@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        window.onload = function(){
+            let first = document.querySelector("#first");
+            console.log(first);  // first 객체 출력
+            console.log(first.textContent); // first 객체의 내용 출력
+        }
+        $(document).ready(
+            function(){
+                let first2 = $("#first");
+                console.log(first2);
+                console.log(first2.text());
+            }
+        )
+    </script>
+</head>
+<body>
+    <p id="first">Hello</p>
+</body>
+</html>

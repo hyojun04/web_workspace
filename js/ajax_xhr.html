@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax_xhr</title>
+    <script>
+        // fetch('https://jsonplaceholder.typicode.com/users/1')
+        //     .then(res=>res.json())   // response를 받으면 response를 json 객체로 만들기
+        //     .then(data => {
+        //         console.log(data)
+        //         document.write(JSON.stringify(data))
+        //     })
+        fetch('https://jsonplaceholder.typicode.com/users',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify({
+                name:'JK',
+                job: 'Engineer'
+            })
+        }).then(res=>res.json())
+          .then(data=>document.write(JSON.stringify(data)));
+
+        // xhr = new XMLHttpRequest();
+        // console.log(xhr.readyState)
+        // xhr.open('GET','https://jsonplaceholder.typicode.com/users/1');
+        // console.log(xhr.readyState)
+        // xhr.send()
+        // console.log(xhr.readyState)
+        // xhr.onreadystatechange = function(event){
+        //     console.log(xhr.readyState)
+        //     if(xhr.readyState==4){
+        //         if(xhr.status==200){
+        //             console.log('OK')
+        //             document.write(xhr.responseText);
+        //         }
+        //     }
+        // }
+        // console.log(xhr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

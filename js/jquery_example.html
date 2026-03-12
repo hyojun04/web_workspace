@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <style>
+        div{
+            width: 100px; height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("#red").click(function(){
+                $("#box")
+                .css("background","red")
+                .css("border","1px dotted blue")
+                .html("<b>" + $(this).text() +"</b>");
+                });
+                $("#blue").click(function(){
+                    $("#box")
+                    .css("background","blue")
+                    .css("border","1px dotted red")
+                    .html("<b>"+ $(this).text() +"</b>");
+                });
+                $("[type=button]").click(function(){
+                    let message = $("[type=text]").val();
+                    $("[type=text]").val("")
+                    $("#box").text(message)
+                });
+                $("[type=button]").mousedown(function(){
+                    $("[type=button]")
+                    .css("background","purple");
+                })
+                $("[type=button]").mouseup(function(){
+                    $("[type=button]")
+                    .css("background","#f0f0f0");
+                })
+
+                $("[type=button]").click(function(){
+                    let message = $("[type=text]").val();
+                    $("[type=text]").val("")
+                    $("#box").text(message);
+                });
+                $("#box").hover(function(){
+                    $("#box")
+                    .css("background","green")
+                    .css("border", "3px solid yellow")
+                    .html("hover");
+                });
+                $("#box").mouseleave(function(){
+                    $("#box")
+                    .css("background","white")
+                    .css("border","1px solid black")
+                    .html("");
+                });
+            }
+            
+
+        )
+    </script>
+</head>
+<body>
+    <div id ="box"></div>
+    <span id="red">RED</span> <span id="blue">BLUE</span><br>
+    <input type="text"> <input type="button" value="확인">
+</body>
+</html>

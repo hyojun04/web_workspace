@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <script>
+        const myArray = ['apple','bananan','orange'];
+        myfunc = function(data){
+            return '<h1>' + data + '<h1>';
+        }
+        const myList = myArray.map(myfunc)
+        const myList2 = myArray.map(item => '<h>'+ item + '</h>');
+        document.write(myList2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

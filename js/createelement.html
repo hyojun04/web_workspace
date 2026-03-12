@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Element</title>
+</head>
+<body>
+    <input type="text"> <input type="button" value="추가"><br>
+    <ul>
+
+    </ul>
+    <script>
+        var textEl = document.querySelector("[type='text']");
+        var btnEl = document.querySelector("[type='button']");
+        var ulEl = document.querySelector("ul");
+        // btnEl.onclick = ()=>{
+        //     let liEl = document.createElement("li");
+        //     liEl.textContent = textEl.value;
+        //     ulEl.appendChild(liEl);
+        // }
+        btnEl.onclick = ()=>{
+            ulEl.innerHTML = ulEl.innerHTML + "<li>" + textEl.value;
+            textEl.value ='';
+        }
+    </script>
+</body>
+</html>
