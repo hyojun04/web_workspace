@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax sample</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            type:'POST',
+            data: JSON.stringify({
+                title: 'foo',
+                body: 'bar',
+                userId: 1
+            }),
+            contentType: 'application/json; charset=UTF-8',
+            dataType: 'json',
+            success: function(response){
+                document.write(JSON.stringify(response));
+            },
+            error: function(xhr, status, error){
+                console.error('에러 발생: ',error);
+            }
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

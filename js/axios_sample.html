@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios sample</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    const result = document.querySelector("#result");
+    axios.get('https://jsonplaceholder.typicode.com/users/1')
+        .then(response =>{
+            result.textContent = '데이터:'+JSON.stringify(response.data);
+        })
+        .catch(error =>{
+            result.textContent = '에러:'+error;
+        });
+</script>
+</html>
